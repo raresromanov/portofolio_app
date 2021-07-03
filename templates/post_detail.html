@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+    <div class="post-detail-container">
+        <h1 class="post-titlu">{{ post.titlu }}</h1>
+        <p class="post-descriere"> &nbsp;&nbsp;{{ post.descriere }}</p>
+            <div class="imagini-box">
+                <img src="{{ post.imagine_post1.url }}">
+                <img src="{{ post.imagine_post2.url }}">
+                <img src="{{ post.imagine_post3.url }}">
+            </div>
+        <a class="box-media-git-links" href="{{ post.git_link }}">
+            <img class="github" src="/static/img/github_logo.png"><p>Git Hub Link</p>
+        </a>
+    <br>
+    <div class="form-si-comentarii">
+        <form class="form-container" method="post">
+            {% csrf_token %}
+
+            {{ form.as_p }}
+            <div class="field">
+                <div class="control">
+                    <button class="button is-succes">Comment</button>
+                </div>
+            </div>
+        </form>
+        <div class="comments-si-comentariile">
+           <h2 class="comm-section">Comments:</h2>
+            <div class="lista-comentarii">
+                {% for comment in post.comments.all %}
+                <article>
+                        <div class="media-content">
+                            <div class="content">
+                                <p>
+                                    <strong>{{ comment.name }}</strong>
+                                    <small>({{ comment.date_added }}):</small>
+                                    <br>
+                                    {{ comment.body }}
+                                </p>
+                            </div>
+                        </div>
+                </article>
+                    {% empty %}
+                    <div class="notification">
+                        <p>
+                            No comments yet!
+                        </p>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+        </div>
+    </div>
+
+{% endblock %}

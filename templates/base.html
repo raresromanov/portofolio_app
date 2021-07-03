@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Khula:wght@300&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portofolio Webpage</title>
+</head>
+
+
+<body>
+    <header>
+        <div class="name">
+            <h1><a href="{% url 'aboutme' %}">Web Development</a></h1>
+        </div>
+
+        <div class="meniu">
+            <div class="menu-item">
+                <a href="{% url 'index' %}">HOME</a>
+            </div>
+            <div class="menu-item">
+                <a href="{% url 'aboutme' %}">ABOUT ME</a>
+            </div>
+            <div class="menu-item">
+                <a href="{%  url 'portofolio' %}">PORTOFOLIO</a>
+            </div>
+            <div class="menu-item">
+                <a href="{% url 'contact' %}">CONTACT</a>
+            </div>
+        </div>
+    </header>
+
+{% block content %}
+
+
+{% endblock %}
+
+
+</body>
+</html>

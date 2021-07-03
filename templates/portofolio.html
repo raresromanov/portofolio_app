@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container-portofolio">
+
+    {% for post in posts %}
+
+            <a class="post-box" href="{% url 'post_detail' post.slug %}">
+
+
+                <img class="post-image" src="{{ post.imagine.url }}" alt="placeholder">
+                 <p class="titlu-post">{{ post.titlu }}</p>
+                <p class="post-date">{{ post.date_added }}</p>
+            </a>
+
+    {% endfor %}
+
+   </div>
+
+{% endblock %}
