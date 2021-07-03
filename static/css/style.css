@@ -67,7 +67,7 @@ footer {
 
 .name a {
     font-family: OCR A Std, monospace;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     font-weight: lighter;
     color: white;
     padding: 1.1rem;
@@ -81,15 +81,15 @@ footer {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    margin-right: 20px;
+
 }
 
 .menu-item a {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     color: black;
     padding: 0 0.7rem;
     font-family: OCR A Std, monospace;
-    font-weight: 500;
+    font-weight: 450;
     text-shadow: 3px 3px white;
 
 
@@ -101,16 +101,17 @@ footer {
         justify-items: center;
         align-items: center;
 
+
     }
 }
 
 @media (min-width: 800px) {
     .menu-item a {
-        font-size: 1.4rem;
+        font-size: 1.3rem;
     }
 
     .name a {
-        font-size: 2rem;
+        font-size: 1.9rem;
     }
 }
 
@@ -161,7 +162,9 @@ footer {
     .name a {
         margin-left: 15px;
     }
-
+    .meniu{
+        margin-right: 30px;
+    }
 }
 
 .avatar {
@@ -189,7 +192,7 @@ footer {
 
 .hi-text {
     color: white;
-    font-size: 0.9rem;
+    font-size: 0.7rem;
     font-family: OCR A Std, monospace;
     margin: 0;
     padding: 0;
@@ -205,7 +208,7 @@ footer {
 .short-description {
     width: auto;
     word-wrap: break-word;
-    font-size: 1rem;
+    font-size: 0.8rem;
     color: white;
     text-align: justify;
     font-family: OCR A Std, monospace;
@@ -214,15 +217,15 @@ footer {
 
 @media (min-width: 1000px) {
     .hi-text {
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
 
     .hi-text-name {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
     }
 
     .short-description {
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
 }
 
@@ -316,7 +319,7 @@ footer {
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
-    padding: 10px 30px;
+    padding: 10px 10px;
 
 }
 
@@ -362,7 +365,7 @@ footer {
 
     font-family: OCR A Std, monospace;
     color: white;
-    padding: 20px;
+    padding: 7px;
 }
 
 .container-portofolio {
@@ -407,6 +410,7 @@ footer {
     color: white;
     text-decoration: none;
     font-family: OCR A Std, monospace;
+    font-size: 0.9rem;
 }
 
 .post-image {
@@ -417,6 +421,7 @@ footer {
     color: white;
     text-decoration: none;
     font-family: OCR A Std, monospace;
+    font-size: 0.6rem;
 }
 
 @media (min-width: 720px) {
